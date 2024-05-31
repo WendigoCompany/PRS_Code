@@ -1,0 +1,11 @@
+{
+  "id" : 0,
+  "name": "Kurumi Tokisaki",
+  "s_name": "Kurumi",
+  "c_model": "PANIC",
+  "l_model": "https://ds-images.bolavip.com/news/image/800/800/?src=https://images.bolavip.com/webp/spo/full/SPO_20240318_SPO_71208_Cuantos-capitulos-tiene-La-Leyenda-de-Korra-ok.webp",
+  "root": "Kurumi_Tokisaki",
+  "imgs": {
+    "loby_card": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/158cf62e-cc0f-4530-9c62-c8ceaa01a22c/width=450/kurumitokisaki-2263808445.jpeg"
+  }
+}

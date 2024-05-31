@@ -1,0 +1,118 @@
+@import "../Basics/colors.less";
+@import "../Basics/sw2.less";
+@import "./Modals/LoadModal.less";
+
+.pop-costu{
+  background-color: fade(@black, 100%) !important;
+}
+
+
+.pop-costu-desk{
+  width: 80%;
+}
+.card {
+}
+
+.card-desk {
+  .card;
+  margin-top: 1%;
+  margin-left: 1%;
+  width: 18rem;
+  height: 25rem;
+  border: 5px dashed @purple;
+  cursor: pointer;
+}
+
+.card-desk:hover {
+  border: 5px solid @purple;
+}
+.card-mob {
+  .card;
+  width: 18rem;
+  height: 26rem;
+  margin-top: 5%;
+  margin-bottom: 3%;
+  margin-left: 10%;
+  border: 5px solid @purple;
+}
+
+
+
+.costume-label {
+  color: @white;
+}
+
+.costu-img-desk {
+  width: 18rem;
+  cursor: pointer;
+
+}
+
+.costu-img-mob {
+  width: 5.5rem;
+}
+
+
+
+.costu-labelname-mob {
+  display: block;
+  font-size: 1.3rem;
+  .costume-label;
+}
+.costu-labelname-desk {
+  .costu-labelname-mob;
+}
+
+.costu-money{
+  border-radius: 50%;
+  background-color: @white;
+}
+
+.costu-money-desk {
+  width: 2rem;
+  margin-right: .8rem;
+  .costu-money;
+  
+
+}
+
+.costu-money-mob {
+  width: 1.3rem;
+  margin-right: 0.3rem;
+  .costu-money;
+
+}
+
+.costu-labmoney-desk{
+  .costume-label;
+  font-size: 1.5rem;
+}
+
+.costu-labmoney-mob{
+  .costume-label;
+}
+
+.costu-cont-desk {
+  margin-right: 3rem;
+}
+
+
+.costu-cont-mob {
+  margin-right: 0.5rem;
+}
+
+
+
+.costu-btn-desk{
+  width: 4rem;
+  background-color: @white;
+  margin-left:  3rem;
+}
+
+
+
+.costu-btn-mob{
+  width: 2.5rem;
+  background-color: @white;
+  margin-left:  1rem;
+}

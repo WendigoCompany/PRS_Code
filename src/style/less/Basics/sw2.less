@@ -1,0 +1,37 @@
+@import "../Basics/colors.less";
+@import "../Basics/basic.fonts.less";
+
+
+
+.btn-sw2 {
+  color: black !important;
+  .basicfont;
+  transition: background-color 0.3s !important;
+  font-size: 1.3rem !important;
+}
+.btn-sw2-confirm {
+  background-color: @green !important;
+  .btn-sw2;
+}
+
+.btn-sw2-cancel {
+  background-color: @red !important;
+  .btn-sw2;
+}
+
+.btn-sw2-confirm:hover {
+  background-color: @green !important;
+}
+
+.btn-sw2-cancel:hover {
+  background-color: @red !important;
+}
+
+.pop-sw2{
+    background-color: fade(@black, 50%) !important;
+}
+
+.txt-sw2{
+    .basicfont;
+    color: @white !important;  
+}
