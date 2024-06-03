@@ -23,9 +23,6 @@ export default function Background_M({ bc_data }) {
   return (
     <>
       <div
-        onLoad={() => {
-          console.log(111);
-        }}
         id="bc"
         style={{ "background-image": `url(${bc_data.img})`, ...bc_data.style }}
         className="bc-mob"

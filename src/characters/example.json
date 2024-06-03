@@ -1,40 +1,5 @@
 [
   {
-    "type": "basic",
-    "text": {
-      "name": "Kurumi",
-      "dialog": "Soy una mimosa!",
-      "style":{
-        "mob":{
-          
-        },
-        "desk":{
-          
-        }
-      }
-    },
-    "background": {
-      "img": "https://onedrive.live.com/embed?resid=292CA9915B33B64D%21146&authkey=%21AFPbyl2XawDjPuI&width=1920&height=1080",
-      "style": {
-        "opacity": 0
-      },
-      "cb": "",
-      "type": "basic"
-    },
-    "sprays": {
-      "type": "anima",
-      "img": [
-        "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/2fea277d-540b-42af-b152-782940dc49ef/ddvk6zx-b33bb4fc-6209-4ea8-be2c-40a9d633826f.png",
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSggCGmI2PntvmLvssOf6wvQqMOH90u1YJJfwoUAjbnO79p7rlNKJYhP64nqOVzfdldcu4&usqp=CAU"
-      ],
-      "speed": 1,
-      "style": {
-        "mob": [{ "width": "10rem" }, { "left": "10%" }],
-        "desk": [{ "width": "10rem" }, { "left": "10%" }]
-      }
-    }
-  },
-  {
     "name": "Kurumi",
     "type": "basic",
     "dialog": "",
@@ -96,8 +61,7 @@
         }
       ],
       "cb": "",
-      "type": "basic",
-      "end": []
+      "type": "basic"
     }
   },
   {
