@@ -1,0 +1,13 @@
+{
+  "title": "WELCOME",
+  "txt_inp_ph": "My name is...",
+  "acp_btn": "Start!",
+  "ccl_btn": "Cancel",
+  "confirm": {
+    "title": "WELCOME",
+    "text": "Please, remember, this game save your game in the url. When you want to save, click in the save button and copy/dowload the url. Thanks and enjoy!"
+  },
+  "error": {
+    "text": "Invalid name. Please, use another."
+  }
+}

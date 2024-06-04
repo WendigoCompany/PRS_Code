@@ -7,6 +7,7 @@ import { loadImagesSequentially } from "../../assets/preload";
 import MEMORY from "../../store/manager";
 import Selections_M from "./mob/Selecctions_m";
 import DialogBox_M from "./mob/Text_m";
+import { HomeButton, SkipButton } from "./buttons";
 
 let userWait = true;
 // http://localhost:3000/#/?lang=en&id=0-1
@@ -22,6 +23,7 @@ export const StopAnimation = () => {
 
 export default function Scene_Compo({ global }) {
   const [reload, reset] = useState(false);
+
 
   const device = useDevice();
   const [loaded, setL] = useState(false);
@@ -176,36 +178,7 @@ export default function Scene_Compo({ global }) {
               <DialogBox_M tx_data={DATA.text}/>
             </>
           );
-        // if (device == "mob") {
 
-        //   if (DATA.type == "select") {
-        //     DATA.sprays = { type: "basic" };
-        //     DATA.background = { img: "same" };
-        //   }
-        //   return (
-        //     <>
-        //       <Background_M bc_data={DATA.background} />
-        //       {DATA.type == "select" ? <Selections_M /> : ""}
-        //       <Sprays_M sp_data={DATA.sprays} />
-        //       <DialogBox_M tx_data={DATA.text}/>
-        //     </>
-        //   );
-        // } else {
-        //   switch (DATA.type) {
-        //     case "basic":
-        //       return (
-        //         <>
-        //           <Background_D bc_data={DATA.background}  />
-        //           {DATA.type == "select" ? <Selections_M /> : ""}
-        //           <Sprays_M sp_data={DATA.sprays} />
-        //           <DialogBox_M tx_data={DATA.text}/>
-        //         </>
-        //       );
-
-        //     default:
-        //       break;
-        //   }
-        // }
       } else {
         return "";
       }
@@ -227,5 +200,9 @@ export default function Scene_Compo({ global }) {
     SceneController();
   }, []);
 
-  return <>{SCENE_COMPONENT()}</>;
+  return <>
+  <SkipButton/>
+  {SCENE_COMPONENT()}
+  <HomeButton/>
+  </>;
 }

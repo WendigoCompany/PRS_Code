@@ -40,17 +40,3 @@ export default function Spray({ id, data }) {
   );
 }
 
-{
-  /* <div v-if="pack != undefined" class="sp-cont-ins" :id="`ba-${i}`">
-<Individual_Spray
-  :url="pack.url"
-  :sty="pack.style"
-  :tag="i"
-></Individual_Spray>
-</div>
-
-
-<div class="sp-visi" :id="`sp-${tag}`" :style="`opacity : ${opacity}`">
-<img class="sp" :style="sty" :src="url" alt="" @load="show_img" />
-</div> */
-}

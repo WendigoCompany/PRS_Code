@@ -2,19 +2,16 @@ import React, { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import { useDevice } from "../../../context/Device";
 import { StopAnimation } from "../Scene";
-const basic_style = {
-  opacity: 0,
-  position: "absolute",
-  bottom: "30%",
-  left: "0%",
-  transition: "opacity .3s",
-};
-
 const AnimationComponent = ({ sp_data }) => {
   const device = useDevice();
 
   let interval_animation;
   const animationRef = useRef(null);
+
+  window.addEventListener('beforeunload', function (e) {
+    e.preventDefault();
+  });
+
 
   const START_ANIMATION = () => {
     // TIMES
@@ -38,6 +35,9 @@ const AnimationComponent = ({ sp_data }) => {
     interval_animation = setInterval(() => {
   
 
+
+      
+        
       TLS[ACTUAL_TLS].to(document.getElementById(`frame-${i}`), {
         duration: 0.2,
         opacity: 0,
@@ -69,6 +69,13 @@ const AnimationComponent = ({ sp_data }) => {
         duration: 0.2,
         opacity: 1,
       });
+  
+      const img1 = document.getElementById('frame-0');
+      const img2 = document.getElementById('frame-1');
+      if (!img1 && !img2) {
+        clearInterval(interval_animation);
+      }
+
 
 
     }, sp_data.speed * 1000);
@@ -91,33 +98,7 @@ const AnimationComponent = ({ sp_data }) => {
     // }, 3000);
   };
 
-  //   useEffect(() => {
-  //     const animationTimeline = gsap.timeline();
 
-  //     // Agregar las imágenes como fotogramas a la animación
-  //     frames.forEach((frame, index) => {
-  //       const img = new Image();
-  //       img.src = frame;
-  //       img.onload = () => {
-  //         const newImage = document.createElement("img");
-  //         newImage.src = frame;
-  //         newImage.style.opacity = 0;
-  //         animationRef.current.appendChild(newImage);
-
-  //         // Animar la opacidad para una transición suave
-  //         animationTimeline.to(newImage, {
-  //           duration: 1,
-  //           opacity: 1,
-  //           delay: index * 0.1,
-  //         });
-  //       };
-  //     });
-
-  //     return () => {
-  //       // Limpiar la animación al desmontar el componente
-  //       animationTimeline.kill();
-  //     };
-  //   }, [frames]);
 
   useEffect(() => {
     if (sp_data != undefined) {
@@ -131,10 +112,8 @@ const AnimationComponent = ({ sp_data }) => {
           newImage.src = frame;
           animationRef.current.appendChild(newImage);
           newImage.id = `frame-${i}`;
-
-          Object.keys(basic_style).map((k) => {
-            newImage.style[k] = basic_style[k];
-          });
+          newImage.className = "animation-basic";
+   
 
           Object.keys(style[device][i]).map((k) => {
             newImage.style[k] = style[device][i][k];
@@ -151,20 +130,16 @@ const AnimationComponent = ({ sp_data }) => {
   return (
     <>
       <div
-        style={{
-          position: "fixed",
-          top: "0%",
-          right: "0%",
-          "z-index": "1",
-        }}
+
       >
         <button
+          className={`continue-btn-${device}`}
           onClick={() => {
             clearInterval(interval_animation)
             StopAnimation();
           }}
         >
-          CONTINUE
+
         </button>
       </div>
       <div ref={animationRef} style={{}}></div>

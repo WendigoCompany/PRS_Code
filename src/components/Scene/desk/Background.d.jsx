@@ -5,6 +5,7 @@ import { enableScroll } from "../../../assets/scroll_manager";
 
 export default function Background_D({ bc_data }) {
 enableScroll()
+document.body.style.overflow = "hidden";
 
   if (bc_data.img == undefined || bc_data.img == null) {
     bc_data.style = { display: "none" };

@@ -1,15 +1,15 @@
 import { useEffect, useState } from "react";
 import INIT from "../inits/Scene.init";
 import Scene_Compo from "../components/Scene/Scene";
-import SceneProvider from "../context/Scene";
-import GetParams from "../assets/getParams";
 import INIT_SCENE from "../characters/init_scene_main";
+import { useParams } from "react-router-dom";
 
 export default function SCENE() {
   const [SCENE_DATA, setSD] = useState(null);
   const [loaded, setLoaded] = useState(false);
 
-  const params = GetParams();
+
+  const params = useParams();
 
   useEffect(() => {
     const data = {};
