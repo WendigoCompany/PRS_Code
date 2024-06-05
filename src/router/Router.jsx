@@ -8,6 +8,7 @@ import HOME from "../pages/Home";
 import Save_Middleware from "../middleware/Save.mid";
 import LOBY from "../pages/Loby";
 import Token from "../pages/Token";
+import GAME from "../pages/Game";
 
 export default function Router() {
   return (
@@ -51,6 +52,19 @@ export default function Router() {
                 <Disclaim_Middleware>
                   <Save_Middleware>
                     <LOBY />
+                  </Save_Middleware>
+                </Disclaim_Middleware>
+              </Lang_Middleware>
+            }
+          ></Route>
+
+          <Route
+            path="/:lang/game/:id"
+            element={
+              <Lang_Middleware>
+                <Disclaim_Middleware>
+                  <Save_Middleware>
+                    <GAME />
                   </Save_Middleware>
                 </Disclaim_Middleware>
               </Lang_Middleware>

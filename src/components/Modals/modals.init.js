@@ -78,3 +78,18 @@ export async function INIT_NWG({ lang }) {
   }
   
 
+
+  export async function INIT_WCard({ lang }) {
+    const Text = await (async () => {
+      switch (lang.toLowerCase()) {
+        case "en":
+          return import("../../text/en/Modals/W_Card.json");
+        case "sp":
+          return import("../../text/sp/Modals/W_Card.json");
+      }
+    })();
+  
+    return {
+      ...Text,
+    };
+  }

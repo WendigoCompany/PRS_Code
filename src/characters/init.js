@@ -4,8 +4,8 @@ import Korra from "./Korra/params.json";
 import KurumiTokisaki_costumes_en from "./Kurumi_Tokisaki/en/costumes.json";
 import KurumiTokisaki_costumes_sp from "./Kurumi_Tokisaki/sp/costumes.json";
 
-import Korra_costumes_en from "./Kurumi_Tokisaki/en/costumes.json";
-import Korra_costumes_sp from "./Kurumi_Tokisaki/sp/costumes.json";
+import Korra_costumes_en from "./Korra/en/costumes.json";
+import Korra_costumes_sp from "./Korra/sp/costumes.json";
 
 export default [
   {

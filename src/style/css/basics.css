@@ -6,3 +6,18 @@
     width: 100%;
 }
 
+.h-100{
+    height: 100%;
+}
+
+.d-in{
+    display: inline;
+}
+
+.d-inbl{
+    display: inline-block;
+}
+
+.d-bl{
+    display: block;
+}

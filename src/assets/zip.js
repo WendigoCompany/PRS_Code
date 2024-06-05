@@ -21,29 +21,6 @@ const parseBoolArr = (bArr) => {
   return bArr.map((v) => (v ? 1 : 0));
 };
 
-// export function convertToBase(number) {
-//   const base = seed.length; // Base 64
-//   let result = "";
-//   while (number > 0) {
-//     result = seed[number % base] + result;
-//     number = Math.floor(number / base);
-//   }
-
-//   return result || "0"; // Manejo del caso de número 0
-// }
-
-// export function convertFromBase(str) {
-//   const base = seed.length; // Base 64
-
-//   let result = 0;
-//   for (let i = 0; i < str.length; i++) {
-//     const digitValue = seed.indexOf(str[i]);
-//     result = result * base + digitValue;
-//   }
-
-//   return result;
-// }
-
 
 const toBinary = (value) => {
     let binary = "";

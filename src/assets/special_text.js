@@ -8,3 +8,6 @@ export const prepare_special_text = (text, device) => {
   
     return elemets;
   };
+
+
+

@@ -1,0 +1,17 @@
+{
+  "stitle": "CHOOSE A COSTUME",
+  "cl_btn": "Cancel",
+  "buy": {
+    "title": "BUY COSTUME",
+    "conf_btn": "Yes!",
+    "cl_btn": "Cancel",
+    "stitle": "Are you sure you want to buy @COSTUME@ for @WAIFU@?",
+    "error": "Sorry, but you need at least 1 ticket. You can get them playing!"
+  },
+  "game": {
+    "title": "SELECT OPONENT",
+    "conf_btn": "Yes!",
+    "cl_btn": "Cancel",
+    "stitle": "Are you sure you want to select @WAIFU@ wearing @COSTUME@ as your oponent?"
+  }
+}
