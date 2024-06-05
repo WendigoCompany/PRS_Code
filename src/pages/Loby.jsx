@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
-import INIT from "../inits/.init";
+import INIT from "../inits/Loby.init";
 import { useParams } from "react-router-dom";
+import Loby_Compo from "../components/Loby/Loby.compo";
 
 const DATA = {};
 
-export default function COPO() {
+export default function LOBY() {
   const [loaded, setLoaded] = useState(false);
   const params = useParams();
 
@@ -15,9 +16,7 @@ export default function COPO() {
     });
   }, []);
 
-  return <>{
-    loaded ? "" : ""
-  }</>
+  return <>{loaded ? <Loby_Compo/> : ""}</>;
 }
 
-  // <div>{loaded ? <Scene_Compo global={SCENE_DATA}></Scene_Compo> : ""}</div>
+// <div>{loaded ? <Scene_Compo global={SCENE_DATA}></Scene_Compo> : ""}</div>

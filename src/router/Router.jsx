@@ -1,9 +1,14 @@
-import { HashRouter, Route, Routes , redirect } from "react-router-dom";
+import { HashRouter, Route, Routes, redirect } from "react-router-dom";
 import SCENE from "../pages/Scene";
 import DISCLAIM from "../pages/Disclaim";
 import Lang_Middleware from "../middleware/Lang.mid";
 import Disclaim_Middleware from "../middleware/Disclaim.mid";
 import Redirect from "../middleware/Redirect";
+import HOME from "../pages/Home";
+import Save_Middleware from "../middleware/Save.mid";
+import LOBY from "../pages/Loby";
+import Token from "../pages/Token";
+
 export default function Router() {
   return (
     <>
@@ -28,7 +33,33 @@ export default function Router() {
             }
           ></Route>
 
-          <Route path="*" element={<Redirect to={"en/disclaim/"}/>} />
+          <Route
+            path="/:lang/home/"
+            element={
+              <Lang_Middleware>
+                <Disclaim_Middleware>
+                  <HOME />
+                </Disclaim_Middleware>
+              </Lang_Middleware>
+            }
+          ></Route>
+
+          <Route
+            path="/:lang/loby/"
+            element={
+              <Lang_Middleware>
+                <Disclaim_Middleware>
+                  <Save_Middleware>
+                    <LOBY />
+                  </Save_Middleware>
+                </Disclaim_Middleware>
+              </Lang_Middleware>
+            }
+          ></Route>
+
+          <Route path="/load/:token" element={<Token />}></Route>
+
+          <Route path="*" element={<Redirect to={"en/disclaim/"} />} />
         </Routes>
       </HashRouter>
     </>

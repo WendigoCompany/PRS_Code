@@ -1,5 +1,4 @@
 export let seed = [];
-let string_seed = [];
 
 export let zip_char = [];
 

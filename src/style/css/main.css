@@ -1,0 +1,7 @@
+@import url("./basics.css");
+@import url("./margins.css");
+
+
+button{
+    cursor: pointer;
+}
