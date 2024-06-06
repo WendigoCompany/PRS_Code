@@ -13,7 +13,7 @@ const unzip_keys = (data) => {
     data = data.replaceAll(zip.z, zip.uz);
   });
 
-  return data
+  return data;
 };
 
 //NOMBRE DE USUARIO DEBE TENER  16 CHAR MAX Y NO PUEDE TENER @
@@ -31,7 +31,7 @@ const zip_keys = (data) => {
 export default class TOKEN {
   GEN_DATA(token) {
     try {
-      this.data = decode_url(token);  
+      this.data = decode_url(token);
       this.data = unzip_keys(this.data);
     } catch (error) {
       this.data = "";
@@ -43,8 +43,8 @@ export default class TOKEN {
       let data = JSON.parse(sessionStorage.getItem("save"));
       data.l = LANG;
       data = zip_keys(data);
-      const token = build_url(data);
-      this.url = BASEURL + "load/" + token;
+      this.url = build_url(data);
+      // this.url = BASEURL + "load/" + token;
     } catch (error) {
       this.url = "";
       console.error(error);

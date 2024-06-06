@@ -71,7 +71,8 @@ export default function Router() {
             }
           ></Route>
 
-          <Route path="/load/:token" element={<Token />}></Route>
+          {/* <Route path="/load/:token" element={<Token />}></Route> */}
+          <Route path="/load/" element={<Token />}></Route>
 
           <Route path="*" element={<Redirect to={"en/disclaim/"} />} />
         </Routes>

@@ -1,5 +1,7 @@
 import Swal from "sweetalert2";
 import { INIT_LOAD } from "./modals.init";
+import TOKEN from "../../models/token.model";
+import { BASEURL } from "../../assets/page_importants";
 
 let token;
 export const load_game_modal = (LANG) => {
@@ -38,7 +40,8 @@ export const load_game_modal = (LANG) => {
     }).then((result) => {
       if (result.isConfirmed) {
         const final_token = document.getElementById("txt-input").value;
-        window.location.href = final_token;
+        sessionStorage.setItem("token", final_token)
+        window.location.href = BASEURL + "load/";
       }
     });
 

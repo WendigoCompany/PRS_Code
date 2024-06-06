@@ -85,7 +85,7 @@ const DOWLOAD =(LANG, MSJ)=>{
   const URL = generate_url(LANG);
   const filename = Date.now().toString() + ".txt";
   const dowload = document.createElement("a");
-  dowload.href = "data:text/plain;charset=utf-8," + encodeURIComponent(URL);
+  dowload.href = "data:text/plain;charset=utf-8," + (URL);
   dowload.download = filename;
   document.body.appendChild(dowload);
   dowload.click();
