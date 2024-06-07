@@ -74,7 +74,7 @@ const BUY_COSTUME = (WAIFU_ID, COSTUME_ID, device) => {
     },
   }).then((result) => {
     if (result.isConfirmed) {
-      if (save.money > 1) {
+      if (save.money >= 1) {
         save.money -= 1;
         const index = save.waifus.indexOf(
           save.waifus.filter((w) => w.id == WAIFU.id)[0]

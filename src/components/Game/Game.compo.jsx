@@ -7,6 +7,8 @@ import "../../style/less/Components/Game.less";
 import { loadImagesSequentially } from "../../assets/preload";
 import { useEffect, useState } from "react";
 import GAME_SPRAY from "./Spray";
+import Game_Options from "./Game_Options";
+import { disableScroll, enableScroll } from "../../assets/scroll_manager";
 
 export default function Game_Compo({ data }) {
   const lang = useParams().lang;
@@ -28,6 +30,7 @@ export default function Game_Compo({ data }) {
 
     if (preloaded) {
       if (device == "mob") {
+        disableScroll()
         elements.push(
           <div
             className="g-bc-mob"
@@ -37,6 +40,7 @@ export default function Game_Compo({ data }) {
           ></div>
         );
       } else {
+        enableScroll()
       }
     }
 
@@ -51,7 +55,8 @@ export default function Game_Compo({ data }) {
     <div>
       <User_Button cb={back_modal} params={lang} image={back_img} />
       {LOAD_COMPO_BC()}
-      <GAME_SPRAY sp_data={data.game.sprays}></GAME_SPRAY>
+      <GAME_SPRAY sp_data={data.game.sprays}/>
+      <Game_Options/>
     </div>
   );
 }

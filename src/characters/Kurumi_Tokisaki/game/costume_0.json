@@ -6,9 +6,7 @@
   "sprays": [
     {
       "id": 0,
-      "url": "https://s1.zerochan.net/Tokisaki.Kurumi.600.4150321.jpg",
-      "trigger": false,
-      "style": {}
+      "url": "https://s1.zerochan.net/Tokisaki.Kurumi.600.4150321.jpg"
     },
     {
       "id": 1,
@@ -16,9 +14,8 @@
     },
     {
       "id": 2,
-      "url": "https://s1.zerochan.net/Tokisaki.Kurumi.600.4150321.jpg",
-      "trigger": 1,
-      "style": {}
+      "url": "https://s1.zerochan.net/Tokisaki.Kurumi.600.4150321.jpg"
+
     },
     {
       "id": 3,

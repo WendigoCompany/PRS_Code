@@ -1,12 +1,80 @@
 @import "../Basics/basic.bc.less";
 @import "../Basics/colors.less";
 
-.g-bc-mob{
-.bbc;
-width: 100%;
-position: absolute;
-top: 0%;
-left: 0%;
-height: 100%;
-z-index: -1;
+.g-bc-mob {
+  .bbc;
+  width: 100%;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  height: 100%;
+  z-index: -1;
+}
+
+.g-btn-act {
+  background-color: @cyan;
+  border: 2px solid black;
+  transition: opacity 0.3s;
+}
+.g-btn-op-act {
+  background-color: @red;
+  opacity: 0;
+}
+
+.g-btn-act-op-cont-mob {
+  position: relative;
+  z-index: 200;
+  left: 35%;
+}
+
+.g-btn-act-op-mob {
+  .g-btn-act;
+  .g-btn-op-act;
+  width: 25%;
+  margin: 0% 0%;
+  position: absolute;
+}
+
+.g-btn-act-cont-mob {
+  position: absolute;
+  z-index: 200;
+  bottom: 4%;
+}
+
+.g-btn-act-mob {
+  .g-btn-act;
+  width: 25%;
+  margin: 0% 3.5%;
+}
+
+.atten-bar {
+  background-color: fade(@white, 80%);
+  position: absolute;
+}
+
+
+
+.atten-bar-mob {
+  .atten-bar;
+  width: 100%;
+  height: 2rem;
+  bottom: 9rem;
+}
+
+.att-lb-mob {
+  font-size: 1.3rem;
+  color: black;
+  position: relative;
+    z-index: 500;
+}
+
+.atten-bar-fill-mob{
+    .atten-bar;
+    position: relative;
+    background-color: fade(@cyan, 80%);
+
+    height: 2rem;
+    bottom: 105%;
+    transition: width .3s;
+
 }

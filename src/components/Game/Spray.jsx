@@ -6,11 +6,29 @@ import { useParams } from "react-router-dom";
 
 // sessionStorage.setItem("tigger", false);
 
+export let NEXT_SPRAY;
+  
 export default function GAME_SPRAY({ sp_data }) {
   const [sprayID, setSPID] = useState(parseInt(sessionStorage.getItem("sidg")));
   // const [preloaded, setPL] = useState(false);
   const device = useDevice();
   const lang = useParams().lang;
+
+
+  NEXT_SPRAY=()=>{
+    const next_spray = sprayID + 1;
+    const spray_data = sp_data.filter((sp) => sp.id == next_spray)[0];
+    if(spray_data.trigger == "END"){
+        return true
+    }else{
+      setSPID(next_spray)
+      sessionStorage.setItem("sidg", next_spray)
+      return false
+    }
+    
+  }
+
+
   // const PRELOAD = () => {
   //     loadImagesSequentially([data.game.bc.url])
   //       .then((res) => {
@@ -24,7 +42,7 @@ export default function GAME_SPRAY({ sp_data }) {
 
   const LOAD_SPRAY = () => {
     const spray_data = sp_data.filter((sp) => sp.id == sprayID)[0];
-    if(spray_data.trigger != false && sessionStorage.getItem("tigger") == "false"){
+    if(spray_data.trigger != undefined){
         if(spray_data.trigger == "END"){
             alert("YOU ARE WINNER")
         }else{
