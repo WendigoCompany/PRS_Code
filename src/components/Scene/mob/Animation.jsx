@@ -1,12 +1,14 @@
 import React, { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import { useDevice } from "../../../context/Device";
-import { StopAnimation } from "../Scene";
+import { StopAnimation, set_userWait } from "../Scene";
 const AnimationComponent = ({ sp_data }) => {
   const device = useDevice();
-
   let interval_animation;
   const animationRef = useRef(null);
+
+
+  set_userWait(true)
 
   window.addEventListener('beforeunload', function (e) {
     e.preventDefault();
@@ -29,6 +31,7 @@ const AnimationComponent = ({ sp_data }) => {
       duration: 0.2,
       opacity: 0,
     });
+
 
 
 

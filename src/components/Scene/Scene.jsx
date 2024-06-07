@@ -8,13 +8,24 @@ import MEMORY from "../../store/manager";
 import Selections_M from "./mob/Selecctions_m";
 import DialogBox_M from "./mob/Text_m";
 import { HomeButton, SkipButton } from "./buttons";
+import { BASEURL } from "../../assets/page_importants";
+import { useParams } from "react-router-dom";
 
-let userWait = true;
+let userWait = false;
 // http://localhost:3000/#/?lang=en&id=0-1
 let COUNTER = 0;
 
 // getter of NEXTSCENE for StopAnimation
 let NEXT_SCENE_SERVICE;
+
+
+export const get_userWait =()=>{
+  return userWait
+}
+
+export const set_userWait =(value)=>{
+    userWait = value;
+}
 
 export const StopAnimation = () => {
   userWait = false;
@@ -23,7 +34,7 @@ export const StopAnimation = () => {
 
 export default function Scene_Compo({ global }) {
   const [reload, reset] = useState(false);
-
+  const lang = useParams().lang;
 
   const device = useDevice();
   const [loaded, setL] = useState(false);
@@ -170,15 +181,18 @@ export default function Scene_Compo({ global }) {
           DATA.background = { img: "same" };
         }
 
-          return (
-            <>
-              {(device == "mob") ? (<Background_M bc_data={DATA.background} />): (<Background_D bc_data={DATA.background} />)}
-              {DATA.type == "select" ? <Selections_M /> : ""}
-              <Sprays_M sp_data={DATA.sprays} />
-              <DialogBox_M tx_data={DATA.text}/>
-            </>
-          );
-
+        return (
+          <>
+            {device == "mob" ? (
+              <Background_M bc_data={DATA.background} />
+            ) : (
+              <Background_D bc_data={DATA.background} />
+            )}
+            {DATA.type == "select" ? <Selections_M /> : ""}
+            <Sprays_M sp_data={DATA.sprays} />
+            <DialogBox_M tx_data={DATA.text} />
+          </>
+        );
       } else {
         return "";
       }
@@ -187,10 +201,21 @@ export default function Scene_Compo({ global }) {
     }
   };
 
+
+  
   const END_SCENE = () => {
     //EN CADA SCENE, CREAR UNA CB , QUE SE VA A EJECUTAR ACA
-    window.location.reload();
-    alert("SE TERMINO!");
+    sessionStorage.setItem("tigger", true);
+    sessionStorage.setItem("sidg",(parseInt(sessionStorage.getItem("sidg")))+1)
+    window.location.href =
+      BASEURL +
+      lang +
+      "/game/" +
+      `${sessionStorage.getItem("widg")}-${sessionStorage.getItem("cidg")}`;
+    //   setTimeout(function() {
+    //     window.location.reload();
+    // }, 100); 
+    // alert("SE TERMINO!");
   };
 
   useEffect(() => {
@@ -200,9 +225,11 @@ export default function Scene_Compo({ global }) {
     SceneController();
   }, []);
 
-  return <>
-  <SkipButton/>
-  {SCENE_COMPONENT()}
-  <HomeButton/>
-  </>;
+  return (
+    <>
+      <SkipButton cb={END_SCENE}/>
+      {SCENE_COMPONENT()}
+      <HomeButton />
+    </>
+  );
 }

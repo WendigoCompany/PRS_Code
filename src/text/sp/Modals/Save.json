@@ -1,11 +1,11 @@
 {
     "title": "GUARDAR PARTIDA",
     "ccl_btn": "Cancelar",
-    "text": "Por favor, seleccione una opción para obtener su url de salvado (Descargar = Descargara un archivo.txt // Copiar = Se copiara en su portapapeles)",
+    "text": "Descarge su partida guardada",
     "copy_btn": "COPIAR",
     "dowload_btn": "DESCARGAR",
     "copy_msj" : "URL Copiada!",
-    "dowload_msj" : "URL Descargada!"
+    "dowload_msj" : "Partida Descargada!"
 }
 
 

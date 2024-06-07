@@ -93,3 +93,18 @@ export async function INIT_NWG({ lang }) {
       ...Text,
     };
   }
+
+  export async function INIT_Skip({ lang }) {
+    const Text = await (async () => {
+      switch (lang.toLowerCase()) {
+        case "en":
+          return import("../../text/en/Modals/Skip.json");
+        case "sp":
+          return import("../../text/sp/Modals/Skip.json");
+      }
+    })();
+  
+    return {
+      ...Text,
+    };
+  }

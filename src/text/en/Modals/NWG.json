@@ -5,7 +5,7 @@
   "ccl_btn": "Cancel",
   "confirm": {
     "title": "WELCOME",
-    "text": "Please, remember, this game save your game in the url. When you want to save, click in the save button and copy/dowload the url. Thanks and enjoy!"
+    "text":  "Please, remember, this game save your game in a save file that you will have to download pressing the save button. Sorry for any inconvenience. Thanks and enjoy!"
   },
   "error": {
     "text": "Invalid name. Please, use another."

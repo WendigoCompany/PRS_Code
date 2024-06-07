@@ -2,14 +2,22 @@ import { useEffect, useState } from "react";
 import INIT from "../inits/Scene.init";
 import Scene_Compo from "../components/Scene/Scene";
 import INIT_SCENE from "../characters/init_scene_main";
-import { useParams } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
+import LANG_MIDDLEWARE from "../middleware/Lang_mid";
+import DISCLAIM_MIDDLEWARE from "../middleware/Disclaim.mid";
 
 export default function SCENE() {
   const [SCENE_DATA, setSD] = useState(null);
   const [loaded, setLoaded] = useState(false);
 
 
+
   const params = useParams();
+
+
+  LANG_MIDDLEWARE(params.lang, useLocation().pathname);
+  DISCLAIM_MIDDLEWARE(params.lang, useLocation().pathname)
+
 
   useEffect(() => {
     const data = {};

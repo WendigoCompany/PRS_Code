@@ -5,7 +5,7 @@
     "ccl_btn": "Cancelar",
     "confirm": {
       "title": "BIENVENIDO!",
-      "text": "Por favor, recuerda, este juego guarda tu partida en un formato url. Cuando quieras guardar, has click en el botón de guardar y copia/descarga la url proporcionada. Gracias y diviértete!"
+      "text": "Por favor, recuerda, este juego guarda tu partida en un archivo que debera descargar. Perdone los inconvenientes.  Gracias y diviértete!"
     },
     "error": {
       "text": "Nombre invalido, por favor intenta otro."

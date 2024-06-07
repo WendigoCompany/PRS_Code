@@ -1,0 +1,28 @@
+{
+  "bc": {
+    "url": "https://sakuranouta.biz/wp-content/uploads/2024/01/%E3%83%9B%E3%83%86%E3%83%AB%E3%81%AE%E4%B8%80%E5%AE%A4_4_%E3%82%A2%E3%83%BC%E3%83%88%E3%83%9C%E3%83%BC%E3%83%89-1.jpg",
+    "style": {}
+  },
+  "sprays": [
+    {
+      "id": 0,
+      "url": "https://s1.zerochan.net/Tokisaki.Kurumi.600.4150321.jpg",
+      "trigger": false,
+      "style": {}
+    },
+    {
+      "id": 1,
+      "trigger": 1
+    },
+    {
+      "id": 2,
+      "url": "https://s1.zerochan.net/Tokisaki.Kurumi.600.4150321.jpg",
+      "trigger": 1,
+      "style": {}
+    },
+    {
+      "id": 3,
+      "trigger": "END"
+    }
+  ]
+}

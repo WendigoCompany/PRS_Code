@@ -1,15 +1,15 @@
 import Swal from "sweetalert2";
-import { INIT_Back } from "./modals.init";
+import { INIT_Skip } from "./modals.init";
 import { BASEURL } from "../../assets/page_importants";
 
-export const back_modal = (
+export const skip_modal = (
   LANG,
   extra = {
     onConfirm: () => {},
     onCancel: () => {},
   }
 ) => {
-  INIT_Back({ lang: LANG }).then((TEXT) => {
+  INIT_Skip({ lang: LANG }).then((TEXT) => {
     Swal.fire({
       title: TEXT.title,
       text: TEXT.text,
@@ -26,9 +26,9 @@ export const back_modal = (
       },
     }).then((result) => {
       if (result.isConfirmed) {
-        window.location.href = BASEURL + LANG + "/loby";
-      }else{
-        extra.onCancel()
+        extra.onConfirm();
+      } else {
+        extra.onCancel();
       }
     });
   });
