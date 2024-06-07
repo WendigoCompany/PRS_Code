@@ -114,6 +114,7 @@ const BUY_COSTUME = (WAIFU_ID, COSTUME_ID, device) => {
   });
 };
 
+
 const CREATE_COSTUME_CARD = (COSTUME, WAIFU_ID, device) => {
   const save = JSON.parse(sessionStorage.getItem("save"));
 

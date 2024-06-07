@@ -1,7 +1,8 @@
 import Swal from "sweetalert2";
 import { INIT_LOAD } from "./modals.init";
-import TOKEN from "../../models/token.model";
+// import TOKEN from "../../models/token.model";
 import { BASEURL } from "../../assets/page_importants";
+import { unzip_keys } from "../../models/save.methods";
 
 let token;
 export const load_game_modal = (LANG) => {
@@ -20,9 +21,7 @@ export const load_game_modal = (LANG) => {
       <br/>
       <input type="file" class="input-modal input-hidden" id="file-input" accept=".txt">
       <button class="input-modal btn-info mat-2 mab-2" id="search-btn">${TEXT.file_inp}</button>
-      <br/>
-      <input placeholder="${TEXT.txt_inp_ph}" type="text" class="input-modal basic-input" id="txt-input">
-  
+     
       
       </div>
       
@@ -39,8 +38,10 @@ export const load_game_modal = (LANG) => {
       },
     }).then((result) => {
       if (result.isConfirmed) {
-        const final_token = document.getElementById("txt-input").value;
-        sessionStorage.setItem("token", final_token)
+        // const final_token = document.getElementById("txt-input").value;
+
+        token = unzip_keys(token);
+        sessionStorage.setItem("token", token)
         window.location.href = BASEURL + "load/";
       }
     });
@@ -57,7 +58,7 @@ const search_file = () => {
       const reader = new FileReader();
       reader.onload = function (e) {
         token = e.target.result;
-        document.getElementById("txt-input").value = e.target.result;
+        // document.getElementById("txt-input").value = e.target.result;
       };
       reader.readAsText(file);
     }

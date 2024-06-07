@@ -8,6 +8,23 @@ import { BASEURL } from "../../assets/page_importants";
 import { INIT_NWG } from "./modals.init";
 import "../../style/less/Components/Modals/LoadModal.less"
 
+const forbiden_chars = ['/', '\\', '?', '%', '*', ':', '|', '"', '<', '>', '.', '$', '!', '&', "'", '`', '~', '{', '}', '[', ']', '^', '@', '+', '=', ';', ',', '#'];
+
+
+const evaluate_name =(name)=>{
+    let valid = true;
+    
+    forbiden_chars.map(fc => {
+      if(name.includes(fc)){
+        valid = false;
+      }
+    })
+
+    console.log(valid);
+
+    return valid
+}
+
 export const new_game_modal = (LANG) => {
   INIT_NWG({ lang: LANG }).then((TEXT) => {
     Swal.fire({
@@ -28,7 +45,7 @@ export const new_game_modal = (LANG) => {
       },
     }).then((result) => {
       if (result.isConfirmed) {
-        if (result.value.trim().length == 0) {
+        if (result.value.trim().length == 0 || !evaluate_name(result.value)) {
           Swal.fire({
             text: TEXT.error.text,
             customClass: {
@@ -40,7 +57,7 @@ export const new_game_modal = (LANG) => {
               input: "basic-input",
             },
           }).then(() => {
-            new_game_modal(TEXT);
+            new_game_modal(LANG);
           });
         } else {
           Swal.fire({
@@ -65,3 +82,5 @@ export const new_game_modal = (LANG) => {
     });
   });
 };
+
+
