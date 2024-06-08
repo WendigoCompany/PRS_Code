@@ -31,6 +31,7 @@ export default function Game_Compo({ data }) {
     if (preloaded) {
       if (device == "mob") {
         disableScroll()
+        document.body.style.overflow = "auto";
         elements.push(
           <div
             className="g-bc-mob"
@@ -41,6 +42,18 @@ export default function Game_Compo({ data }) {
         );
       } else {
         enableScroll()
+        document.body.style.overflow = "hidden";
+        elements.push(
+          <div
+            className="g-bc-desk"
+            // style={{
+            //   "background-image": `url(${data.game.bc.url})`,
+            // }}
+          >
+            <img className="w-100" src={data.game.bc.url} alt="" />
+          </div>
+        );
+
       }
     }
 
@@ -56,7 +69,7 @@ export default function Game_Compo({ data }) {
       <User_Button cb={back_modal} params={lang} image={back_img} />
       {LOAD_COMPO_BC()}
       <GAME_SPRAY sp_data={data.game.sprays}/>
-      <Game_Options/>
+      <Game_Options bar_txt={data.global.bar}/>
     </div>
   );
 }

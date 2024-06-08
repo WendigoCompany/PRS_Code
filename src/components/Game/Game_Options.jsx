@@ -13,7 +13,7 @@ import { NEXT_SPRAY } from "./Spray";
 import { endgame_modal } from "../Modals/user_endgame";
 import { useParams } from "react-router-dom";
 
-export default function Game_Options() {
+export default function Game_Options({bar_txt}) {
   const device = useDevice();
   const [select, setSel] = useState(0);
   const [user_life, setLife] = useState(100);
@@ -140,7 +140,7 @@ export default function Game_Options() {
             }}
             className={`t-center att-lb-${device}`}
           >
-            ATTENCION
+            {bar_txt}
           </h3>
           <div
             style={{

@@ -11,6 +11,13 @@
   z-index: -1;
 }
 
+.g-bc-desk {
+  position: absolute;
+  top: 0%;
+  z-index: -1;
+  left: 0%;
+}
+
 .g-btn-act {
   background-color: @cyan;
   border: 2px solid black;
@@ -27,6 +34,13 @@
   left: 35%;
 }
 
+.g-btn-act-op-cont-desk {
+  position: absolute;
+  z-index: 200;
+  left: 10%;
+  width: 10rem;
+  top: 5%;
+}
 .g-btn-act-op-mob {
   .g-btn-act;
   .g-btn-op-act;
@@ -35,7 +49,19 @@
   position: absolute;
 }
 
+.g-btn-act-op-desk {
+  .g-btn-act;
+  .g-btn-op-act;
+  margin: 0% 0%;
+  position: absolute;
+}
+
 .g-btn-act-cont-mob {
+  position: absolute;
+  z-index: 200;
+  bottom: 4%;
+}
+.g-btn-act-cont-desk {
   position: absolute;
   z-index: 200;
   bottom: 4%;
@@ -46,13 +72,16 @@
   width: 25%;
   margin: 0% 3.5%;
 }
+.g-btn-act-desk {
+  .g-btn-act;
+  width: 10%;
+  margin: 0% 1%;
+}
 
 .atten-bar {
   background-color: fade(@white, 80%);
   position: absolute;
 }
-
-
 
 .atten-bar-mob {
   .atten-bar;
@@ -60,21 +89,58 @@
   height: 2rem;
   bottom: 9rem;
 }
+.atten-bar-desk {
+  .atten-bar;
+  width: 40rem;
+  height: 2rem;
+  bottom: 15rem;
+}
 
 .att-lb-mob {
   font-size: 1.3rem;
   color: black;
   position: relative;
-    z-index: 500;
+  z-index: 500;
+}
+.att-lb-desk {
+  font-size: 1.3rem;
+  color: black;
+  position: relative;
+  z-index: 500;
 }
 
-.atten-bar-fill-mob{
-    .atten-bar;
-    position: relative;
-    background-color: fade(@cyan, 80%);
+.atten-bar-fill-mob {
+  .atten-bar;
+  position: relative;
+  background-color: fade(@cyan, 80%);
+  height: 2rem;
+  bottom: 105%;
+  transition: width 0.3s;
+}
 
-    height: 2rem;
-    bottom: 105%;
-    transition: width .3s;
+.atten-bar-fill-desk {
+  .atten-bar;
+  position: relative;
+  background-color: fade(@cyan, desk);
+  height: 2rem;
+  bottom: 105%;
+  transition: width 0.3s;
+}
 
+.g-main-spray {
+  position: absolute;
+  opacity: 0;
+  transition: opacity .3s;
+}
+
+.g-main-spray-mob {
+  .g-main-spray;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+.g-main-spray-desk {
+  .g-main-spray;
+  bottom: 10%;
+  right: 20%;
 }

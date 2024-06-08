@@ -3,14 +3,14 @@
     "cl_btn": "Cancelar",
     "buy": {
       "title": "COMPRAR VESTIDO",
-      "conf_btn": "Si!",
+      "conf_btn": "¡Si!",
       "cl_btn": "Cancelar",
       "stitle": "¿Estas seguro de que quieres comprar @COSTUME@ para @WAIFU@?",
       "error": "Lo siento, pero necesitas por lo menos 1 ticket. ¡Juega para ganarlos!"
     },
     "game": {
       "title": "ELIJE TU OPONENTE",
-      "conf_btn": "Si!",
+      "conf_btn": "¡Si!",
       "cl_btn": "Cancelar",
       "stitle": "¿Estas seguro de que quieres elejir a @WAIFU@ vistiendo @COSTUME@ como tu oponente?"
     }

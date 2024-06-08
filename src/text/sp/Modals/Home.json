@@ -1,7 +1,7 @@
 {
 
-    "title": "VOLVER AL LOBY",
-    "text": "¿Estas seguro que quieres volver al loby? (Recuerda que perderas todo el progreso de este desafio.)",
+    "title": "VOLVER AL MENU PRINCIPAL",
+    "text": "¿Estas seguro que quieres volver al menu principal? (Recuerda que perderas todo el progreso no guardado.)",
     "acp_btn": "OK",
     "ccl_btn": "Cancelar"
 }

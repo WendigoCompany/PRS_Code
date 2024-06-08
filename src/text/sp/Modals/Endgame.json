@@ -1,12 +1,15 @@
 {
   "win": {
-    "title": "CONGRATULATIONS!",
-    "text": "YOU WON A NEW TICKET!",
-    "acp_btn": "OK!"
+    "title": "¡FELICITACIONES!",
+    "text": "¡GANASTE UN OTRO TICKET!",
+    "acp_btn": "¡OK!"
   },
   "lose": {
-    "title": "GAME OVER",
-    "text": "YOU LOSE... Returning to loby... Try again! You can do it!",
-    "acp_btn": "YES!"
+    "title": "FIN DEL JUEGO",
+    "text": "PERDITE... VOLVIENDO AL LOBY... ¡VUELVE A INTENTARLO! ¡TU PUEDES!",
+    "acp_btn": "¡SI!"
   }
 }
+
+
+

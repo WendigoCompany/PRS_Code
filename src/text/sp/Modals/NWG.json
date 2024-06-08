@@ -1,11 +1,11 @@
 {
-    "title": "BIENVENIDO!",
+    "title": "¡BIENVENIDO!",
     "txt_inp_ph": "Mi nombre es...",
-    "acp_btn": "Comenzar!",
+    "acp_btn": "¡Comenzar!",
     "ccl_btn": "Cancelar",
     "confirm": {
-      "title": "BIENVENIDO!",
-      "text": "Por favor, recuerda, este juego guarda tu partida en un archivo que debera descargar. Perdone los inconvenientes.  Gracias y diviértete!"
+      "title": "¡BIENVENIDO!",
+      "text": "Por favor, recuerda, este juego guarda tu partida en un archivo que debera descargar. Perdone los inconvenientes.  ¡Gracias y diviértete!"
     },
     "error": {
       "text": "Nombre invalido, por favor intenta otro."
